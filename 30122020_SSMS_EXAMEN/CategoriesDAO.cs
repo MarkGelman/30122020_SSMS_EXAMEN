@@ -104,7 +104,7 @@ namespace _30122020_SSMS_EXAMEN
 
             return 0;
         }
-
+              
         public void GetById (int id)
         {
             _query = $"SELECT * FROM Categories Where id = {id}";
