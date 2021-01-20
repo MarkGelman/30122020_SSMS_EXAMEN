@@ -114,15 +114,14 @@ namespace _30122020_SSMS_EXAMEN
 
         public void GetLargestTypeOfStories ()
         {
-            _query ="SELECT c.id,c.name " +
-                    "FROM (SELECT category_id, Count(*) Numbers_Of_Category" +
-                            "FROM Stores" +
-                            "GROUP BY category_id) nn " +
-                    "JOIN Categories c ON  nn.category_id = c.id " +
-                    "WHERE nn.Numbers_Of_Category  =(" +
-                                                       "SELECT TOP 1 Count(*) FROM Stores " +
-                                                       "GROUP BY category_id " +
-                                                       "Order BY Count(*) DESC); ";
+            _query = "SELECT c.id,c.name FROM  (SELECT category_id, Count(*) Numbers_Of_Category FROM Stores GROUP BY category_id) nn JOIN Categories c ON  nn.category_id = c.id WHERE nn.Numbers_Of_Category  =(SELECT TOP 1 Count(*) FROM Stores GROUP BY category_id  Order BY Count(*) DESC);";
+                       
+                           
+                    
+                    
+                                                       
+                                                       
+                                                     
 
             PrintAll(Reader(_query, "Get Largest Type Of Stories"), "Get Largest Type Of Stories");
         }
