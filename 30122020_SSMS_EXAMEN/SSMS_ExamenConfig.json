@@ -1,0 +1,5 @@
+{
+  "SSMS_Examen": {
+    "ConnectionString": "Data Source=.;Database = 30122020_EXAMENSQL;Integrated Security=True"
+  }
+}
